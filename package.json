@@ -1,0 +1,37 @@
+{
+	"name": "pub-sub-pattern-concept-experiment",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start:server": "node server.js",
+		"start:subscriber1": "cross-env TOPIC_ID=topic_foo node subscriber.js",
+		"start:subscriber2": "cross-env TOPIC_ID=topic_foo node subscriber.js",
+		"start:subscriber3": "cross-env TOPIC_ID=topic_bar node subscriber.js",
+		"start:subscriber4": "cross-env TOPIC_ID=topic_foobar node subscriber.js",
+		"start:foo-publisher": "cross-env NAME=FOO_PUBLISHER TOPIC_ID=topic_foo node publisher.js",
+		"start:bar-publisher": "cross-env NAME=BAR_PUBLISHER TOPIC_ID=topic_bar node publisher.js",
+		"start:foobar-publisher": "cross-env NAME=FOOBAR_PUBLISHER TOPIC_ID=topic_foobar node publisher.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/cerino-ligutom/pub-sub-pattern-concept-experiment.git"
+	},
+	"author": {
+		"email": "zeferinix@gmail.com",
+		"name": "Cerino O. Ligutom III",
+		"url": "https://www.zeferinix.com"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/cerino-ligutom/pub-sub-pattern-concept-experiment/issues"
+	},
+	"homepage": "https://github.com/cerino-ligutom/pub-sub-pattern-concept-experiment#readme",
+	"dependencies": {
+		"axios": "^0.19.2",
+		"cross-env": "^7.0.2",
+		"express": "^4.17.1",
+		"express-ws": "^4.0.0",
+		"readline": "^1.3.0"
+	}
+}
